@@ -1,3 +1,6 @@
+import timeit
+
+code_to_test ="""
 def decor(func):
     def inner(*args, **kwargs):
         print('Результат: ')
@@ -27,3 +30,6 @@ def create_list(count: int):
 inc_list(my_list_1)
 
 create_list(5)
+"""
+elapsed_time = timeit.timeit(code_to_test, number=100)/100
+print(elapsed_time)

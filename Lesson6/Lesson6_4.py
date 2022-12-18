@@ -8,7 +8,7 @@ new_dict = [{'id': k, 'name': v[0], 'phone': v[2], 'age': v[1]} for (k, v) in da
 print(new_dict)
 
 path = "D:\TMS_Python\TMS_Project\Lesson6\csv_test.csv"
-with open(path, 'w') as f:
-    wr = csv.DictWriter(f, fieldnames=cols)
+with open(path, 'w', newline='') as f:
+    wr = csv.DictWriter(f, fieldnames=cols)add
     wr.writeheader()
     wr.writerows(new_dict)
